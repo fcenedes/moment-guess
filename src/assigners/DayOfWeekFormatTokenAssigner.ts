@@ -17,11 +17,11 @@ class DayOfWeekFormatTokenAssigner implements IAssigner {
 		this._map = new Map();
 
 		if (!format || format === 'default') {
-			this._map.set(/[0-6]/, 'd');
-			this._map.set(/[0-6](?:st|nd|rd|th)/, 'do');
-			this._map.set(/(?:Su|Mo|Tu|We|Th|Fr|Sa)/, 'dd');
-			this._map.set(/(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)/, 'ddd');
-			this._map.set(/(?:Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)/, 'dddd');
+			this._map.set(/[0-6]/, 'E');
+			this._map.set(/[0-6](?:st|nd|rd|th)/, 'E');
+			this._map.set(/(?:Su|Mo|Tu|We|Th|Fr|Sa)/, 'EE');
+			this._map.set(/(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)/, 'EEE');
+			this._map.set(/(?:Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)/, 'EEEE');
 		} else {
 			this._map.set(/[0-6]/, '%w');
 			this._map.set(/[0-6](?:st|nd|rd|th)/, 'NA');

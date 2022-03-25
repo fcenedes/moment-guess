@@ -19,7 +19,7 @@ class DayOfYearFormatTokenAssigner implements IAssigner {
 		if (!format || format === 'default') {
 			this._map.set(/\d{1,3}/, 'DDD');
 			this._map.set(/\d{3}/, 'DDDD');
-			this._map.set(/\d{1,3}(?:st|nd|rd|th)/, 'DDDo');
+			this._map.set(/\d{1,3}(?:st|nd|rd|th)/, 'DDD');
 		} else {
 			this._map.set(/\d{1,3}/, 'NA');
 			this._map.set(/\d{3}/, '%j');
